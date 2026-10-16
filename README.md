@@ -14,7 +14,7 @@ Onde pedir leis, decisões e processos por API — testado de verdade, explicado
 
 ---
 
-## 🧒 Explicando como se fosse para uma criança
+## 💡 O que é isto, em poucas palavras
 
 Imagine que cada tribunal e cada órgão do governo é uma **biblioteca gigante** cheia de leis e decisões.
 
