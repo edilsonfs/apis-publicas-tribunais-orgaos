@@ -2,8 +2,8 @@
 
 # 🇧🇷 APIs Públicas de Tribunais e Órgãos Públicos
 
-**Um mapa das portas abertas da Justiça e do governo brasileiro na internet.**<br>
-Onde pedir leis, decisões e processos por API — testado de verdade, explicado de forma simples.
+**As APIs públicas da Justiça e do governo brasileiro, reunidas e testadas.**<br>
+Onde consultar leis, decisões judiciais e processos por API, com instruções claras para cada fonte.
 
 [![APIs verificadas](https://img.shields.io/badge/APIs%20verificadas-39-2ea44f)](#índice)
 [![Verificado em](https://img.shields.io/badge/verificado%20em-out%2F2026-blue)](#como-sabemos-que-funciona)
@@ -14,15 +14,15 @@ Onde pedir leis, decisões e processos por API — testado de verdade, explicado
 
 ---
 
-## 💡 O que é isto, em poucas palavras
+## 💡 O que é este repositório
 
-Imagine que cada tribunal e cada órgão do governo é uma **biblioteca gigante** cheia de leis e decisões.
+Tribunais e órgãos públicos brasileiros disponibilizam na internet uma grande quantidade de informação: leis, decisões judiciais, dados de processos, normas da Receita Federal e do Banco Central.
 
-Algumas bibliotecas têm uma **janelinha** onde um computador pode pedir um papel e receber a resposta na hora, sem ninguém precisar abrir a porta. Essa janelinha se chama **API**.
+Parte dessa informação pode ser consultada diretamente por programas de computador, por meio de **APIs** — endereços que recebem uma consulta e devolvem os dados de forma organizada, sem que seja preciso navegar pelo site.
 
-O problema: ninguém conta onde ficam as janelinhas, nem como falar com elas. Cada biblioteca fala de um jeito diferente.
+O problema é que essas APIs raramente são divulgadas. Cada órgão adota um formato diferente, a documentação costuma ser escassa ou inexistente, e descobrir o que funciona pode levar dias.
 
-**Este repositório é o mapa.** Ele mostra onde fica cada janelinha, o que dá para pedir, como pedir e quais regras de educação seguir para não incomodar a biblioteca.
+**Este repositório reúne, em um só lugar, as APIs públicas que funcionam:** onde ficam, o que oferecem, como consultá-las e quais limites respeitar. Cada uma foi testada antes de entrar na lista.
 
 ## 🎯 Para que serve
 
@@ -57,7 +57,7 @@ Tudo aqui aponta para **domínios oficiais** (`.jus.br`, `.gov.br`, `.leg.br`, `
 | 📦 **Arquivo de dados abertos** | O órgão publica arquivos (ZIP, JSON, CSV) para baixar. Ótimo para ter tudo no seu computador. |
 | 🔧 **JSON do site oficial** | É a API que o próprio site de pesquisa do órgão usa. Funciona, mas **não tem contrato público**: pode mudar sem aviso. |
 | 🛡️ **Precisa de navegador** | O site pede um teste anti-robô automático (não é CAPTCHA). É preciso abrir um navegador uma vez para receber um cookie. |
-| ⚠️ | Tem uma pegadinha importante. Leia a ficha antes de usar. |
+| ⚠️ | Há um ponto de atenção importante. Leia a ficha antes de usar. |
 
 Cada linha tem uma **ficha** com endereço, parâmetros, limites e observações verificadas.
 
@@ -199,12 +199,12 @@ curl -X POST "https://api-publica.datajud.cnj.jus.br/api_publica_tjpe/_search" \
 
 ## Uso responsável
 
-Essas janelinhas atendem o país inteiro. Seja gentil:
+Essas APIs atendem o país inteiro e não foram feitas para uso intensivo. Algumas regras:
 
 1. **Devagar:** no máximo 1 requisição por segundo. Algumas fontes bloqueiam por horas quem corre (veja os ⚠️).
 2. **Guarde o que baixou:** não peça a mesma coisa duas vezes. Para muitos dados, prefira os 📦 arquivos.
 3. **CAPTCHA, login ou bloqueio = pare.** Contornar proteção não é uso de API pública.
-4. **Pessoas de verdade:** decisões trazem nomes. Respeite a LGPD (Lei 13.709/2018) ao guardar e publicar.
+4. **Dados pessoais:** decisões trazem nomes de pessoas. Respeite a LGPD (Lei 13.709/2018) ao guardar e publicar.
 5. **Valor legal:** o texto que vale é o publicado no Diário Oficial. Cópias e compilações ajudam, mas não substituem.
 6. **Termos de uso:** o DataJud, por exemplo, só permite uso não comercial. Leia a ficha.
 
@@ -234,7 +234,7 @@ APIs mudam. Se alguma parou de funcionar, [abra uma issue](../../issues/new?temp
 
 ## Como contribuir
 
-Achou uma API nova, uma pegadinha ou um link quebrado? Veja o [guia de contribuição](CONTRIBUTING.md). Regras de ouro:
+Encontrou uma API nova, um ponto de atenção ou um link quebrado? Veja o [guia de contribuição](CONTRIBUTING.md). Regras de ouro:
 
 - Só **domínios oficiais**.
 - Só o que **você testou** (diga a data).

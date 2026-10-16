@@ -1,6 +1,6 @@
 # Como contribuir
 
-Obrigado por ajudar a manter o mapa atualizado! 💚
+Obrigado por ajudar a manter esta lista atualizada.
 
 ## O que aceitamos
 
